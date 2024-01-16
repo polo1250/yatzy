@@ -1,3 +1,6 @@
+## Student Name and numnber
+Abdias Dagbekpo 300101078
+
 ## Synopsis
 
 yatzy
