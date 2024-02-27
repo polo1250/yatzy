@@ -1,9 +1,11 @@
 ## Student Name and numnber
+
 Abdias Dagbekpo 300101078
 
 ## Synopsis
 
-yatzy
+Lab4: yatzy
+Devoir2: Spelling-Bee
 
 ## Code Example
 
