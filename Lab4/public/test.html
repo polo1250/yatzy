@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Yatzy Game</title>
+        <script type="module">
+            import { YatzyGame } from "./assets/yatzy_game.js";
+
+            const game = new YatzyGame();
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const diceElements = document.querySelectorAll(".die");
+                const rollButton = document.getElementById("rollDice");
+                const resetButton = document.getElementById("resetTurn");
+
+                // Update the UI with the current dice values
+                function updateDiceDisplay() {
+                    diceElements.forEach((dieElement, index) => {
+                        dieElement.textContent = game.diceValues[index];
+                        dieElement.style.backgroundColor = game.diceStates[
+                            index
+                        ]
+                            ? "lightgreen"
+                            : "";
+                    });
+                }
+
+                // Roll dice and update UI
+                rollButton.addEventListener("click", () => {
+                    game.rollDice();
+                    updateDiceDisplay();
+                });
+
+                // Reset the game for a new turn
+                resetButton.addEventListener("click", () => {
+                    game.resetTurn();
+                    updateDiceDisplay();
+                });
+
+                // Toggle die state on click
+                diceElements.forEach((dieElement, index) => {
+                    dieElement.addEventListener("click", () => {
+                        const currentState = game.diceStates[index];
+                        game.setDieState(index, !currentState);
+                        updateDiceDisplay();
+                    });
+                });
+
+                updateDiceDisplay(); // Initial display update
+            });
+        </script>
+        <style>
+            .die {
+                display: inline-block;
+                margin: 5px;
+                padding: 20px;
+                background-color: #f0f0f0;
+                font-size: 20px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Yatzy Game</h1>
+        <div id="diceContainer">
+            <div class="die">0</div>
+            <div class="die">0</div>
+            <div class="die">0</div>
+            <div class="die">0</div>
+            <div class="die">0</div>
+        </div>
+        <button id="rollDice">Roll Dice</button>
+        <button id="resetTurn">Reset Turn</button>
+    </body>
+</html>
