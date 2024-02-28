@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Spelling Bee Game</title>
+        <link rel="stylesheet" href="index.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="blank-aside"></div>
+        <div class="game-container">
+            <div class="level-score">
+                <div class="level">Beginner</div>
+                <div class="score">Score: <span id="score">0</span></div>
+            </div>
+
+            <div class="word-input">
+                <input
+                    type="text"
+                    id="word-guess"
+                    placeholder="Type here"
+                    autofocus
+                />
+            </div>
+
+            <div class="honeycomb">
+                <div class="honeycomb-cell"><span>A</span></div>
+                <div class="honeycomb-cell"><span>A</span></div>
+                <div class="honeycomb-cell"><span>A</span></div>
+                <div class="honeycomb-cell"><span>A</span></div>
+                <div class="honeycomb-cell"><span>A</span></div>
+                <div class="honeycomb-cell"><span>A</span></div>
+                <div class="honeycomb-cell"><span>A</span></div>
+            </div>
+
+            <div class="controls">
+                <button id="delete">Delete</button>
+                <button id="enter">Enter</button>
+            </div>
+        </div>
+        <div class="blank-aside"></div>
+    </body>
+</html>
