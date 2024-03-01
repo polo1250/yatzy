@@ -5,39 +5,90 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Spelling Bee Game</title>
         <link rel="stylesheet" href="index.css" />
-        <script src="script.js" defer></script>
+        <script src="index.js" defer></script>
     </head>
     <body>
         <div class="blank-aside"></div>
-        <div class="game-container">
-            <div class="level-score">
-                <div class="level">Beginner</div>
-                <div class="score">Score: <span id="score">0</span></div>
+        <div class="game-container" id="game-container">
+            <div class="level-score" id="level-score">
+                <div class="level" id="level">Beginner</div>
+                <div class="score" id="score">Score: <span id="score-span">0</span></div>
             </div>
 
-            <div class="word-input">
+            <div class="input-container" id="input-container">
                 <input
                     type="text"
-                    id="word-guess"
+                    id="input"
+                    class="input"
                     placeholder="Type here"
                     autofocus
                 />
             </div>
 
-            <div class="honeycomb">
-                <div class="honeycomb-cell"><span>A</span></div>
-                <div class="honeycomb-cell"><span>A</span></div>
-                <div class="honeycomb-cell"><span>A</span></div>
-                <div class="honeycomb-cell"><span>A</span></div>
-                <div class="honeycomb-cell"><span>A</span></div>
-                <div class="honeycomb-cell"><span>A</span></div>
-                <div class="honeycomb-cell"><span>A</span></div>
+            <div class="honeycomb" id="honeycomb">
+                <div class="honeycomb-row" id="honeycomb-row-1">
+                    <button
+                        class="honeycomb-cell"
+                        id="honeycomb-cell-1"
+                        onclick="alert('Button clicked!')"
+                    >
+                        A
+                    </button>
+                    <button
+                        class="honeycomb-cell"
+                        id="honeycomb-cell-2"
+                        onclick="alert('Button clicked!')"
+                    >
+                        A
+                    </button>
+                </div>
+                <div class="honeycomb-row" id="honeycomb-row-2">
+                    <button
+                        class="honeycomb-cell"
+                        id="honeycomb-cell-3"
+                        onclick="alert('Button clicked!')"
+                    >
+                        A
+                    </button>
+                    <button
+                        class="honeycomb-cell"
+                        id="honeycomb-cell-4"
+                        style="background-color: #0056d2;"
+                        onclick="alert('Button clicked!')"
+                    >
+                        A
+                    </button>
+                    <button
+                        class="honeycomb-cell"
+                        id="honeycomb-cell-5"
+                        onclick="alert('Button clicked!')"
+                    >
+                        A
+                    </button>
+                </div>
+                <div class="honeycomb-row" id="honeycomb-row-3">
+                    <button
+                        class="honeycomb-cell"
+                        id="honeycomb-cell-6"
+                        onclick="alert('Button clicked!')"
+                    >
+                        A
+                    </button>
+                    <button
+                        class="honeycomb-cell"
+                        id="honeycomb-cell-7"
+                        onclick="alert('Button clicked!')"
+                    >
+                        A
+                    </button>
+                </div>
             </div>
-
             <div class="controls">
-                <button id="delete">Delete</button>
-                <button id="enter">Enter</button>
+                <button id="button-delete" class="button-delete">Delete</button>
+                <button id="button-reset" class="button-reset" style="background: url('https://www.flaticon.com/free-icons/reset') no-repeat center center; width: 50px; height: 50px;"></button>
+                <button id="button-enter" class="button-enter">Enter</button>
             </div>
+        </div>
         </div>
         <div class="blank-aside"></div>
     </body>
