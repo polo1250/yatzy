@@ -76,6 +76,35 @@ class SpellingBee {
         document.querySelector("#input").value = "";
     }
 
+    setLevelsOfAchievement() {
+        let levels = [
+            "Beginner",
+            "Good",
+            "Great",
+            "Amazing",
+            "Genius",
+            "Master",
+        ];
+
+        let levelText = "Current level: ";
+
+        if (this.currentScore <= 10) {
+            levelText += levels[0];
+        } else if (this.currentScore > 10 && this.currentScore <= 20) {
+            levelText += levels[1];
+        } else if (this.currentScore > 20 && this.currentScore <= 30) {
+            levelText += levels[2];
+        } else if (this.currentScore > 30 && this.currentScore <= 40) {
+            levelText += levels[3];
+        } else if (this.currentScore > 40 && this.currentScore < 50) {
+            levelText += levels[4];
+        } else {
+            levelText += levels[5];
+        }
+
+        document.querySelector("#level").innerHTML = levelText;
+    }
+
     // private
     async loadWordsAndFilterSevenLetterWords() {
         try {
@@ -123,10 +152,15 @@ document.querySelector("#button-reset").addEventListener("click", function () {
 document.querySelector("#button-submit").addEventListener("click", function () {
     if (game.checkWord()) {
         game.scoreWord();
-        document.querySelector("#score").innerHTML = game.currentScore;
+        document.querySelector(
+            "#score"
+        ).innerHTML = `Score: ${game.currentScore}`;
+        game.setLevelsOfAchievement();
         game.clearInput();
     } else {
-        alert("This word is not valid");
+        alert(
+            "Word not in the words list or does not contain the middle letter."
+        );
     }
 });
 
