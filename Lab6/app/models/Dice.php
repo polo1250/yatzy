@@ -8,3 +8,4 @@ class Dice {
         return $randomNumber;
     }
 }
+?>

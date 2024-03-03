@@ -104,8 +104,8 @@ body {
     margin-top: 20px;
 }
 
-.button-delete,
-.button-enter {
+.button-clear,
+.button-submit {
     border: 1px solid gray;
     border-radius: 16px;
     cursor: pointer;
@@ -115,8 +115,21 @@ body {
     background-color: #fff;
 }
 
-.button-delete:active,
+.button-reset {
+    border: 1px solid gray;
+    border-radius: 16px;
+    cursor: pointer;
+    outline: none;
+    // padding: 12px 20px;
+    font-size: 2em;
+    background-color: #fff;
+    color: #000;
+    width: 55px;
+    height: 50px;
+}
+
+.button-clear:active,
 .button-reset:active,
-.button-enter:active {
+.button-submit:active {
     background-color: gray;
 }
