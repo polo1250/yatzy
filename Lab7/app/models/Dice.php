@@ -1,5 +1,5 @@
 <?php
-namespace Lab6;
+namespace Lab7;
 
 class Dice {
     private $values = [];

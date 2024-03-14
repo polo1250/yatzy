@@ -86,20 +86,20 @@ class SpellingBee {
             "Master",
         ];
 
-        let levelText = "Current level: ";
+        let levelText = "Current displayed strength: ";
 
         if (this.currentScore <= 10) {
-            levelText += levels[0];
+            levelText += "<b>" + levels[0] + "</b>";
         } else if (this.currentScore > 10 && this.currentScore <= 20) {
-            levelText += levels[1];
+            levelText += "<b>" + levels[1] + "</b>";
         } else if (this.currentScore > 20 && this.currentScore <= 30) {
-            levelText += levels[2];
+            levelText += "<b>" + levels[2] + "</b>";
         } else if (this.currentScore > 30 && this.currentScore <= 40) {
-            levelText += levels[3];
+            levelText += "<b>" + levels[3] + "</b>";
         } else if (this.currentScore > 40 && this.currentScore < 50) {
-            levelText += levels[4];
+            levelText += "<b>" + levels[4] + "</b>";
         } else {
-            levelText += levels[5];
+            levelText += "<b>" + levels[5] + "</b>";
         }
 
         document.querySelector("#level").innerHTML = levelText;
