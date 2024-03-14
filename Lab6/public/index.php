@@ -1,7 +1,6 @@
 <?php
 require_once('_config.php');
 
-use Lab6\Dice;
 use Lab6\YatzyGame;
 use Lab6\YatzyEngine;
 
