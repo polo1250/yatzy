@@ -49,6 +49,11 @@ class SpellingBee {
             !this.userGuesses.includes(word)
         ) {
             this.userGuesses.push(word);
+
+            // Update the frontend with the guessed words
+            var wordsBox = document.getElementById("words-box");
+            wordsBox.textContent = this.userGuesses.join(", ");
+
             return true;
         } else {
             return false;
@@ -86,7 +91,7 @@ class SpellingBee {
             "Master",
         ];
 
-        let levelText = "Current displayed strength: ";
+        let levelText = "Current strength level: ";
 
         if (this.currentScore <= 10) {
             levelText += "<b>" + levels[0] + "</b>";
