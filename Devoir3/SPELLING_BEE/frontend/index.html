@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Spelling Bee Game</title>
+        <link rel="stylesheet" href="index.css" />
+        <script type="module" src="index.js" defer></script>
+    </head>
+    <body>
+        <div class="blank-aside"></div>
+        <div class="game-container" id="game-container">
+            <div class="level-score" id="level-score">
+                <div class="level" id="level">Current strength level: <b>Beginner</b></div>
+                <div class="score" id="score">Score: <span id="score-span">0</span></div>
+                <div class="submitted-words" id="submitted-words">
+                    <h3>Submitted words:</h3>
+                    <div class="words-box" id="words-box"></div>
+                </div>
+            </div>
+
+            <div class="input-container" id="input-container">
+                <input
+                    type="text"
+                    id="input"
+                    class="input"
+                    placeholder="Type here"
+                    autofocus
+                />
+            </div>
+
+            <div class="honeycomb" id="honeycomb">
+                <div class="honeycomb-row" id="honeycomb-row-1">
+                    <button class="honeycomb-cell" id="honeycomb-cell-1">A</button>
+                    <button class="honeycomb-cell" id="honeycomb-cell-2">A</button>
+                </div>
+                <div class="honeycomb-row" id="honeycomb-row-2">
+                    <button class="honeycomb-cell" id="honeycomb-cell-3">A</button>
+                    <button class="honeycomb-cell" id="honeycomb-cell-4" style="background-color: #0056d2;">A</button>
+                    <button class="honeycomb-cell" id="honeycomb-cell-5">A</button>
+                </div>
+                <div class="honeycomb-row" id="honeycomb-row-3">
+                    <button class="honeycomb-cell" id="honeycomb-cell-6">A</button>
+                    <button class="honeycomb-cell" id="honeycomb-cell-7">A</button>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="button-clear" class="button-clear">Clear</button>
+                <button id="button-reset" class="button-reset">&#x1F504;</button>
+                <button id="button-submit" class="button-submit">Enter</button>
+            </div>
+        </div>
+        </div>
+        <div class="blank-aside"></div>
+    </body>
+</html>
